@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>A/L ICT MCQ Quiz</title>
+
+<style>
+body{
+font-family:Arial;
+background:#f4f6f8;
+text-align:center;
+padding:20px;
+}
+
+.quiz-box{
+background:white;
+padding:20px;
+margin:auto;
+width:70%;
+border-radius:8px;
+box-shadow:0 0 8px rgba(0,0,0,0.1);
+}
+
+button{
+display:block;
+width:60%;
+margin:10px auto;
+padding:10px;
+font-size:16px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+background:#3498db;
+color:white;
+}
+
+button:hover{
+background:#2980b9;
+}
+
+#result{
+font-size:20px;
+margin-top:20px;
+}
+</style>
+
+<script>
+let score=0;
+let total=3;
+
+function check(answer,correct){
+if(answer==correct){
+score++;
+alert("Correct!");
+}else{
+alert("Wrong!");
+}
+}
+
+function showResult(){
+document.getElementById("result").innerHTML=
+"Your Score: "+score+" / "+total;
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>A/L ICT MCQ Quiz</h1>
+
+<div class="quiz-box">
+
+<h3>1. What does CPU stand for?</h3>
+
+<button onclick="check('A','B')">Central Program Unit</button>
+<button onclick="check('B','B')">Central Processing Unit</button>
+<button onclick="check('C','B')">Computer Personal Unit</button>
+<button onclick="check('D','B')">Control Processing Unit</button>
+
+
+<h3>2. Which device stores data permanently?</h3>
+
+<button onclick="check('A','C')">RAM</button>
+<button onclick="check('B','C')">Cache</button>
+<button onclick="check('C','C')">Hard Disk</button>
+<button onclick="check('D','C')">Register</button>
+
+
+<h3>3. Which language is used to design web pages?</h3>
+
+<button onclick="check('A','A')">HTML</button>
+<button onclick="check('B','A')">Python</button>
+<button onclick="check('C','A')">C++</button>
+<button onclick="check('D','A')">Java</button>
+
+<br>
+
+<button onclick="showResult()" style="background:#27ae60;">
+Show Result
+</button>
+
+<p id="result"></p>
+
+</div>
+
+</body>
+</html>
