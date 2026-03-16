@@ -1,107 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>A/L ICT MCQ Quiz</title>
-
+<title>Register</title>
 <style>
-body{
-font-family:Arial;
-background:#f4f6f8;
-text-align:center;
-padding:20px;
+body {
+  font-family: Arial;
+  background: #f4f4f4;
+  text-align: center;
+  padding-top: 50px;
 }
 
-.quiz-box{
-background:white;
-padding:20px;
-margin:auto;
-width:70%;
-border-radius:8px;
-box-shadow:0 0 8px rgba(0,0,0,0.1);
+form {
+  background: white;
+  display: inline-block;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-button{
-display:block;
-width:60%;
-margin:10px auto;
-padding:10px;
-font-size:16px;
-border:none;
-border-radius:6px;
-cursor:pointer;
-background:#3498db;
-color:white;
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 250px;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-button:hover{
-background:#2980b9;
+button {
+  background-color: #2ecc71;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-#result{
-font-size:20px;
-margin-top:20px;
+button:hover {
+  background-color: #27ae60;
 }
 </style>
-
-<script>
-let score=0;
-let total=3;
-
-function check(answer,correct){
-if(answer==correct){
-score++;
-alert("Correct!");
-}else{
-alert("Wrong!");
-}
-}
-
-function showResult(){
-document.getElementById("result").innerHTML=
-"Your Score: "+score+" / "+total;
-}
-</script>
-
 </head>
-
 <body>
 
-<h1>A/L ICT MCQ Quiz</h1>
+<h2>Student Registration</h2>
 
-<div class="quiz-box">
-
-<h3>1. What does CPU stand for?</h3>
-
-<button onclick="check('A','B')">Central Program Unit</button>
-<button onclick="check('B','B')">Central Processing Unit</button>
-<button onclick="check('C','B')">Computer Personal Unit</button>
-<button onclick="check('D','B')">Control Processing Unit</button>
-
-
-<h3>2. Which device stores data permanently?</h3>
-
-<button onclick="check('A','C')">RAM</button>
-<button onclick="check('B','C')">Cache</button>
-<button onclick="check('C','C')">Hard Disk</button>
-<button onclick="check('D','C')">Register</button>
-
-
-<h3>3. Which language is used to design web pages?</h3>
-
-<button onclick="check('A','A')">HTML</button>
-<button onclick="check('B','A')">Python</button>
-<button onclick="check('C','A')">C++</button>
-<button onclick="check('D','A')">Java</button>
-
-<br>
-
-<button onclick="showResult()" style="background:#27ae60;">
-Show Result
-</button>
-
-<p id="result"></p>
-
-</div>
+<form>
+  <input type="text" placeholder="Full Name"><br>
+  <input type="email" placeholder="Email"><br>
+  <input type="password" placeholder="Password"><br><br>
+  <button type="submit">Register</button>
+</form>
 
 </body>
 </html>
